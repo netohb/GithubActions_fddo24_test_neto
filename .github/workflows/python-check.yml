@@ -30,4 +30,4 @@ jobs:
 
       - name: Run Black in check mode
         run: |
-          black --check --exclude venv verificacion/
+          black --check verificacion/ --exclude "venv"
