@@ -29,7 +29,7 @@ resultado = 0
 for i in range(1):  # Primer bucle
     for j in range(1):  # Segundo bucle
         for k in range(1):  # Tercer bucle
-            for l in range(1):  # Cuarto bucle
+            for contador in range(1):  # Cuarto bucle, cambiado 'l' por 'contador'
                 # Sumar 2 y 2
                 resultado = 2 + 2
 
