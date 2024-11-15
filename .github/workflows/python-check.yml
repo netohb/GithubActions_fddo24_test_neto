@@ -1,9 +1,12 @@
 name: Python Code Style Check
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
+    branches: 
+      - main  # Ejecutar solo en PRs hacia la rama main
+  push:
+    branches:
+      - main  # Ejecutar solo cuando haya push a main
 
 jobs:
   linting:
@@ -17,17 +20,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.10"  # Usa la versión de Python que prefieras
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install flake8 black  # Instalar Flake8 y Black
 
       - name: Run Flake8
         run: |
-          flake8 verificacion/
+          flake8 verificacion/  # Ejecutar Flake8 sobre la carpeta verificacion/
 
       - name: Run Black in check mode
         run: |
-          black --check verificacion/ --exclude "venv"
+          black --check verificacion/ --exclude "venv"  # Ejecutar Black en modo de solo revisión
