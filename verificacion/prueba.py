@@ -20,4 +20,4 @@ print(f"La suma de {numero1} y {numero2} es: {operacion.sumar()}")
 print(f"La resta de {numero1} y {numero2} es: {operacion.restar()}")
 
 
-print ("ewnfnfijnfweijnfijwniufnweiufnwiunfiuewnfiuwnfuinwuifnweuifncweuinwueffiuwncuiwenfiucbeciubwuiecbeibwiucbceuicbwuiebciuwebciuwbeiu")
+print("Hola como están todos")
