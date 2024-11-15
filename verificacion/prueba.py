@@ -16,6 +16,5 @@ numero2 = float(input("Ingresa el segundo número: "))
 
 operacion = Operaciones(numero1, numero2)
 
-printf("fdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")
 print(f"La suma de {numero1} y {numero2} es: {operacion.sumar()}")
 print(f"La resta de {numero1} y {numero2} es: {operacion.restar()}")
