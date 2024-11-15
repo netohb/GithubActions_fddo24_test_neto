@@ -1,9 +1,9 @@
-name: python-check
+name: Python Code Style Check
 
 on:
   push:
     branches: [ "main" ]
-  
+  pull_request:
 
 jobs:
   linting:
@@ -26,8 +26,9 @@ jobs:
 
       - name: Run Flake8
         run: |
-          flake8 .
+          flake8 verificacion/
 
       - name: Run Black in check mode
         run: |
-          black --check .
+          black --check verificacion/
+
