@@ -23,13 +23,12 @@ jobs:
 
     steps:
       - name: "Display Message"
-      run: echo "Hola mundo"
+        run: echo "Hola mundo"
 
-      -name: "Mostrando variables entorno"
-        run: 
-          echo "Esto es el valor de platform: ${{ env.platform }}"
-          echo "Esto es e valor de la region: ${{env.region}}"
-          echo "Esto es el valor del account: ${{env.account}}"
-          
+      - name: "Mostrando variables entorno"
+        run:    
+          echo "Esto es el valor de platform: ${{env.platform}}"
+
+
 
 
