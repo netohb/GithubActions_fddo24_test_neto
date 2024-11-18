@@ -99,3 +99,22 @@ class Calculadora:
         if b == 0:
             raise ValueError("El divisor no puede ser cero.")
         return a / b
+    
+    @staticmethod
+    def sumar_y_agregar_dos(a, b):
+        """
+        Suma dos números y les agrega dos.
+
+        Parameters
+        ----------
+        a : float
+            El primer número.
+        b : float
+            El segundo número.
+
+        Returns
+        -------
+        float
+            La suma de a y b, incrementada en 2.
+        """
+        return a + b + 2
