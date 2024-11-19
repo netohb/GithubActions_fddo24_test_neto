@@ -5,38 +5,40 @@ on:
     branches:
       - main
     paths:
-      - 'documentacion/**' # Solo ejecuta el workflow si hay cambios en la carpeta 'documentacion/'
+      - 'documentacion/**'  # This triggers the workflow only when changes are made in the 'documentacion/' directory
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Clonar el repositorio
+      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Configurar Python
+      # 2. Set up Python 3.12
       - name: Set up Python 3.12
         uses: actions/setup-python@v3
         with:
           python-version: 3.12
 
-      # 3. Instalar dependencias
+      # 3. Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. Generar la documentación con Sphinx
+      # 4. Build the Sphinx Documentation
       - name: Build Sphinx Documentation
         run: |
           cd documentacion/docs
           sphinx-build -b html . _build/html
 
-      # 5. Desplegar en GitHub Pages
+      # 5. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: actions-gh-pages/action@v2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          # Carpeta que contiene los archivos HTML generados por Sphinx
+          # Path to the folder containing the generated HTML files
           publish_dir: documentacion/docs/_build/html
+          # If you want to deploy to a specific branch, for example 'gh-pages', you can add:
+          # publish_branch: gh-pages
