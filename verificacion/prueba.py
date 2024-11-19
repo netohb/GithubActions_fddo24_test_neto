@@ -35,3 +35,5 @@ for i in range(1):  # Primer bucle
 
 # Imprimir el resultado
 print("El resultado de la suma es:", resultado)
+
+print("Hola")
