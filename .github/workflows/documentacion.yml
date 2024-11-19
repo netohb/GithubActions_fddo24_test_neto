@@ -40,5 +40,6 @@ jobs:
         with:
           # Path to the folder containing the generated HTML files
           publish_dir: documentacion/docs/_build/html
-          # If you want to deploy to a specific branch, for example 'gh-pages', you can add:
-          # publish_branch: gh-pages
+          publish_branch: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
