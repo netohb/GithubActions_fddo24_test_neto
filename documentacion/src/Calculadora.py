@@ -129,7 +129,7 @@ class Calculadora:
         a : float
             El primer número.
         b : float
-            El segundo número lol lol.
+            El segundo número lol lol lol.
 
         Returns
         -------
