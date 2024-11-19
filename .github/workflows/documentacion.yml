@@ -1,29 +1,42 @@
-name: Build Sphinx Documentation
+name: Build and Deploy Sphinx Documentation
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'documentacion/**' # Solo ejecuta el workflow si hay cambios en la carpeta 'documentacion/'
 
 jobs:
-  build-docs:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Clonar el repositorio
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python 3.10
+      # 2. Configurar Python
+      - name: Set up Python 3.12
         uses: actions/setup-python@v3
         with:
           python-version: 3.12
 
+      # 3. Instalar dependencias
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # 4. Generar la documentación con Sphinx
       - name: Build Sphinx Documentation
         run: |
           cd documentacion/docs
-          make html
+          sphinx-build -b html . _build/html
+
+      # 5. Desplegar en GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions-gh-pages/action@v2
+        with:
+          # Carpeta que contiene los archivos HTML generados por Sphinx
+          publish_dir: documentacion/docs/_build/html
