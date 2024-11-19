@@ -1,25 +1,28 @@
 # Configuration file for the Sphinx documentation builder.
+#
+# For the full list of built-in configuration values, see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-project = 'Calculator Documentation'
-author = 'Alberto Marquez'
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+
+project = 'Documentacion'
+copyright = '2024, Andre, Brayan y Ernesto'
+author = 'Andre, Brayan y Ernesto'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
-extensions = [
-    'sphinx.ext.autodoc',        # Genera documentación desde docstrings
-    'sphinx.ext.napoleon',       # Soporta formatos Google y NumPy para docstrings
-    'sphinx.ext.viewcode',       # Muestra el código fuente vinculado en la documentación
-]
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+extensions = []
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+language = 'es'
 
 # -- Options for HTML output -------------------------------------------------
-html_theme = 'sphinx_rtd_theme'  # Tema Read the Docs (popular y profesional)
-html_static_path = ['_static']
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# -- Path setup --------------------------------------------------------------
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../'))  # Ruta al proyecto principal
+html_theme = 'alabaster'
+html_static_path = ['_static']
