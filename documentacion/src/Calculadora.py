@@ -51,7 +51,7 @@ class Calculadora:
         Returns
         -------
         float
-            La diferencia de a y b.
+            La diferencia de a y b lol.
         """
         return a - b
 
