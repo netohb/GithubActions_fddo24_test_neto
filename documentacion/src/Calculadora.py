@@ -39,7 +39,7 @@ class Calculadora:
     @staticmethod
     def restar(a, b):
         """
-        Resta dos números.
+        Resta dos números lol.
 
         Parameters
         ----------
