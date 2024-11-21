@@ -103,7 +103,7 @@ class Calculadora:
     @staticmethod
     def sumar_y_agregar_dos(a, b):
         """
-        Suma dos números y les agrega dos.
+        Suma dos números y les agrega dos lol.
 
         Parameters
         ----------
