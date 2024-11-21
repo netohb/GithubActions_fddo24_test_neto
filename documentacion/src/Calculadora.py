@@ -39,7 +39,7 @@ class Calculadora:
     @staticmethod
     def restar(a, b):
         """
-        Resta dos números.
+        Resta dos números lol.
 
         Parameters
         ----------
@@ -58,7 +58,7 @@ class Calculadora:
     @staticmethod
     def multiplicar(a, b):
         """
-        Multiplica dos números.
+        Multiplica dos números lol lol.
 
         Parameters
         ----------
