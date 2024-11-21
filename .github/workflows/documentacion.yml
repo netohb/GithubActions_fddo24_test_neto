@@ -51,6 +51,7 @@ jobs:
         if: github.repository == 'AlbertoMarquez794/GithubActions_fddo24_test'  # Se ejecuta solo en el repositorio original
         run: |
           cd documentacion/docs/_build/html
+          git checkout main
           git add .
           git commit -m "Actualizar documentación"
           git push
