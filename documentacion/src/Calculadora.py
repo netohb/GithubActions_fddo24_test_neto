@@ -5,7 +5,7 @@ class Calculadora:
     Métodos
     -------
     sumar(a, b)
-        Devuelve la suma de dos números.
+        Devuelve la suma de dos números lol.
 
     restar(a, b)
         Devuelve la resta de dos números.
