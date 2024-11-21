@@ -20,7 +20,7 @@ class Calculadora:
     @staticmethod
     def sumar(a, b):
         """
-        Suma dos números.
+        Suma dos números lol.
 
         Parameters
         ----------
