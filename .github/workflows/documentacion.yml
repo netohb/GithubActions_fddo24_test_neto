@@ -1,20 +1,55 @@
-name: Build Sphinx Documentation
+name: Build Sphinx Documentation on PR
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'documentacion/src/Calculadora.py'  # Se activa solo si hay cambios en este archivo
-
   pull_request:
     branches:
       - main
     paths:
-      - 'documentacion/src/Calculadora.py'  # Se activa solo si hay cambios en este archivo
+      - 'documentacion/src/Calculadora.py'  # Solo se activa si hay cambios en este archivo
+
+  push:
+    branches:
+      - main
+    paths:
+      - 'documentacion/src/Calculadora.py'  # Solo se activa si hay cambios en este archivo
 
 jobs:
-  build-and-update:
+  build-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Configurar Python
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.12
+
+      # 3. Instalar dependencias
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 4. Generar la documentación con Sphinx
+      - name: Build Sphinx Documentation
+        run: |
+          cd documentacion/docs
+          sphinx-build -b html . _build/html
+
+      # 5. Subir el archivo generado como artefacto
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sphinx-docs-html
+          path: documentacion/docs/_build/html
+          retention-days: 7  # Mantener los artefactos por 7 días en el contexto del PR
+
+  push-docs:
+    if: github.event_name == 'push'  # Solo se ejecuta en un push a main
     runs-on: ubuntu-latest
 
     steps:
@@ -46,21 +81,12 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Ensure main branch exists
-        run: |
-          git branch -a  # Verifica las ramas disponibles
-
-      # 6. Asegurarse de estar en la rama correcta (main o master)
-      - name: Checkout to main branch
-        run: |
-          git checkout master
-
-      # 7. Actualizar el archivo HTML si hay cambios
+      # 6. Subir los cambios generados automáticamente
       - name: Commit and push changes
         run: |
           cd documentacion/docs/_build/html
           git add .
-          git commit -m "Actualizar documentación"
-          git push
+          git commit -m "Actualizar documentación [skip ci]"
+          git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
