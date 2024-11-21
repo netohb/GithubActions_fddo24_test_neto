@@ -58,7 +58,7 @@ class Calculadora:
     @staticmethod
     def multiplicar(a, b):
         """
-        Multiplica dos números lol.
+        Multiplica dos números lol lol.
 
         Parameters
         ----------
