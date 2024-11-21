@@ -49,7 +49,7 @@ jobs:
       # 6. Asegurarse de estar en la rama correcta (main o master)
       - name: Checkout to main branch
         run: |
-          git checkout main
+          git checkout master
 
       # 7. Actualizar el archivo HTML si hay cambios
       - name: Commit and push changes
