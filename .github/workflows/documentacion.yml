@@ -46,6 +46,11 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
+      # 6. Asegurarse de estar en la rama correcta (main o master)
+      - name: Checkout to main branch
+        run: |
+          git checkout main
+
       # 7. Actualizar el archivo HTML si hay cambios
       - name: Commit and push changes
         run: |
