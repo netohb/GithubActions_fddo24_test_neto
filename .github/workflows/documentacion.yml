@@ -57,6 +57,6 @@ jobs:
           cd documentacion/docs/_build/html
           git add .
           git commit -m "Actualizar documentación"
-          git push origin main  # O usa "master" si tu repositorio usa esa rama por defecto
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
