@@ -11,7 +11,7 @@ class Calculadora:
         Devuelve la resta de dos números.
 
     multiplicar(a, b)
-        Devuelve el producto de dos números.
+        Devuelve el producto de dos números lol.
 
     dividir(a, b)
         Devuelve la división de dos números. Lanza una excepción si el divisor es cero.
@@ -20,7 +20,7 @@ class Calculadora:
     @staticmethod
     def sumar(a, b):
         """
-        Suma dos números.
+        Suma dos números lol.
 
         Parameters
         ----------
