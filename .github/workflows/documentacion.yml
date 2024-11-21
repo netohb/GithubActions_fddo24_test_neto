@@ -48,7 +48,7 @@ jobs:
 
       # 6. Actualizar el archivo HTML si hay cambios
       - name: Commit and push changes
-        if: github.repository == 'fddo24ga/GithubActions_fddo24_testB' # Ejecuta esto solo en el repositorio original
+        if: github.repository == 'fddo24ga/GithubActions_fddo24_test' # Ejecuta esto solo en el repositorio original
         run: |
           cd documentacion/docs/_build/html
           git add .
