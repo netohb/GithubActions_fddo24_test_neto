@@ -5,13 +5,13 @@ class Calculadora:
     Métodos
     -------
     sumar(a, b)
-        Devuelve la suma de dos números lol.
+        Devuelve la suma de dos números.
 
     restar(a, b)
         Devuelve la resta de dos números.
 
     multiplicar(a, b)
-        Devuelve el producto de dos números lol.
+        Devuelve el producto de dos números.
 
     dividir(a, b)
         Devuelve la división de dos números. Lanza una excepción si el divisor es cero.
@@ -20,7 +20,7 @@ class Calculadora:
     @staticmethod
     def sumar(a, b):
         """
-        Suma dos números lol.
+        Suma dos números.
 
         Parameters
         ----------
@@ -39,7 +39,7 @@ class Calculadora:
     @staticmethod
     def restar(a, b):
         """
-        Resta dos números lol.
+        Resta dos números.
 
         Parameters
         ----------
@@ -51,14 +51,14 @@ class Calculadora:
         Returns
         -------
         float
-            La diferencia de a y b lol.
+            La diferencia de a y b.
         """
         return a - b
 
     @staticmethod
     def multiplicar(a, b):
         """
-        Multiplica dos números lol lol.
+        Multiplica dos números.
 
         Parameters
         ----------
@@ -103,7 +103,7 @@ class Calculadora:
     @staticmethod
     def sumar_y_agregar_dos(a, b):
         """
-        Suma dos números y les agrega dos lol.
+        Suma dos números y les agrega dos.
 
         Parameters
         ----------
@@ -129,7 +129,7 @@ class Calculadora:
         a : float
             El primer número.
         b : float
-            El segundo número lol lol lol lol lol lol lol.
+            El segundo número.
 
         Returns
         -------
@@ -137,3 +137,22 @@ class Calculadora:
             La suma de a y b, incrementada en 3.
         """
         return a + b + 3
+
+    @staticmethod
+    def sumar_y_agregar_cuatro(a, b):
+        """
+        Suma dos números y les agrega cuatro
+
+        Parameters
+        ----------
+        a : float
+            El primer número.
+        b : float
+            El segundo número.
+
+        Returns
+        -------
+        float
+            La suma de a y b, incrementada en 4.
+        """
+        return a + b + 4
