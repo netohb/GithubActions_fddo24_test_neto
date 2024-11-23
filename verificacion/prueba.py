@@ -9,6 +9,9 @@ class Operaciones:
     def restar(self):
         return self.a - self.b
 
+    def mult_bien(self):
+        return self.a * self.b
+
 
 numero1 = float(input("Ingresa el primer número: "))
 numero2 = float(input("Ingresa el segundo número: "))
