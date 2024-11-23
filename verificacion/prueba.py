@@ -9,7 +9,7 @@ class Operaciones:
     def restar(self):
         return self.a - self.b
 
-    def mult_bien (self):
+    def mult_bien(self):
         return self.a * self.b
 
 
