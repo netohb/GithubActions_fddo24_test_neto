@@ -15,5 +15,5 @@ https://github.com/fddo24ga/GithubActions_fddo24_test_tusuario.git
 ```
 Sustituye "tuusuario" por el nombre. Recomendamos configurar el upstreaam para poder traer los últimos cambios. 
 ```bash
-git remote add upstream git@github.com:Andresaf03/proyecto_dask.git
+git@github.com:AlbertoMarquez794/GithubActions_fddo24_test.git
 ```
