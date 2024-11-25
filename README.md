@@ -13,7 +13,13 @@ Dirigete a la carpeta donde deseas guardar el proyecto y clona tu fork con:
 ```bash
 https://github.com/fddo24ga/GithubActions_fddo24_test_tusuario.git
 ```
-Sustituye "tuusuario" por el nombre. Recomendamos configurar el upstreaam para poder traer los últimos cambios. 
+Sustituye "tuusuario" por el nombre. 
+Ahora accede a tu carpeta
 ```bash
-git@github.com:AlbertoMarquez794/GithubActions_fddo24_test.git
+cd GithubActions_fddo24_test_tusuario
 ```
+Recomendamos configurar el upstreaam para poder traer los últimos cambios. 
+```bash
+git remote add upstream git@github.com:AlbertoMarquez794/GithubActions_fddo24_test.git
+```
+Tendrás todos los documentos listos para la presentación.
