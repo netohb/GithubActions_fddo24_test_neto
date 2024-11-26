@@ -13,7 +13,7 @@ Haz clic en el botón Fork ubicado en la esquina superior derecha del repositori
 ### Clonar el repositorio desde GitHub
 Dirigete a la carpeta donde deseas guardar el proyecto y clona tu fork con: 
 ```bash
-glit clone https://github.com/fddo24ga/GithubActions_fddo24_test_tusuario.git
+glit clone git@github.com:AlbertoMarquez794/GithubActions_fddo24_test_tusuario.git
 ```
 Sustituye "tuusuario" por el nombre. 
 Ahora accede a tu carpeta
