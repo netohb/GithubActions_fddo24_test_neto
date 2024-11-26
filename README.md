@@ -4,6 +4,7 @@ Este repositorio contiene el proyecto de github actions para la materia de Fuent
 ## Integrantes
 - Alberto Márquez
 - Ernesto Bernal
+- Andre Herrera
 
 ## Instrucciones para correr el proyecto
 ###  Hacer un Fork del repostorio
@@ -25,5 +26,13 @@ git remote add upstream git@github.com:AlbertoMarquez794/GithubActions_fddo24_te
 ```
 Tendrás todos los documentos listos para la presentación.
 ## Estructura del Proyecto
-
+```plaintext
+GithubActions_ffdo24_test/
+├── .github/workflows        # Contiene el código de los workflows
+├── documentacion/           # Contiene el material para la explicación de sphinx
+├── testing                  # Carpeta para probar un workflow de testeo
+├── verificacion             # Contiene el material para la explicación de cómo funciona el flake8
+├── README.md                # Documentación, instrucciones.
+└── requirements.txt         # Requerimientos para sphinx y flake8.
+```
 ## Tarea
