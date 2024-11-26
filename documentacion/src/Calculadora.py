@@ -137,22 +137,3 @@ class Calculadora:
             La suma de a y b, incrementada en 3.
         """
         return a + b + 3
-
-    @staticmethod
-    def sumar_y_agregar_cuatro(a, b):
-        """
-        Suma dos números y les agrega cuatro
-
-        Parameters
-        ----------
-        a : float
-            El primer número.
-        b : float
-            El segundo número.
-
-        Returns
-        -------
-        float
-            La suma de a y b, incrementada en 4.
-        """
-        return a + b + 4
