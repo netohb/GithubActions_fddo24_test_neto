@@ -3,6 +3,7 @@ Este repositorio contiene el proyecto de github actions para la materia de Fuent
 
 ## Integrantes
 - Alberto Márquez
+- Ernesto Bernal
 
 ## Instrucciones para correr el proyecto
 ###  Hacer un Fork del repostorio
@@ -23,3 +24,6 @@ Recomendamos configurar el upstreaam para poder traer los últimos cambios.
 git remote add upstream git@github.com:AlbertoMarquez794/GithubActions_fddo24_test.git
 ```
 Tendrás todos los documentos listos para la presentación.
+## Estructura del Proyecto
+
+## Tarea
