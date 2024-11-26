@@ -85,7 +85,7 @@ jobs:
       - name: Commit and push changes
         run: |
           cd documentacion/docs/_build/html
-          git add .
+          git add documentacion/docs/_build/html
           git commit -m "Actualizar documentación [skip ci]"
           git push origin main
         env:
