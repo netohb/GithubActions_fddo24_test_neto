@@ -89,7 +89,7 @@ class Calculadora:
         Returns
         -------
         float
-            El cociente de a dividido por b, ..
+            El cociente de a dividido por b, ...
 
         Raises
         ------
