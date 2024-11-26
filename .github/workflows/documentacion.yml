@@ -84,6 +84,7 @@ jobs:
       # 6. Subir los cambios generados automáticamente
       - name: Commit and push changes
         run: |
+          ls
           cd documentacion
           git add documentacion/
           git commit -m "Actualizar documentación [skip ci]"
