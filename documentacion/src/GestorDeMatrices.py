@@ -7,7 +7,7 @@ class GestorDeMatrices:
     Atributos:
     ----------
     matriz : list
-        Matriz principal con la que se trabajará.
+        Matriz principal con la que se trabajará usted.
 
     Métodos:
     --------
