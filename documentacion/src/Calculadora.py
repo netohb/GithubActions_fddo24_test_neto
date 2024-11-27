@@ -94,7 +94,7 @@ class Calculadora:
         Raises
         ------
         ValueError
-            Si el divisor es cero.
+            Si el divisor es cero, entonces.
         """
         if b == 0:
             raise ValueError("El divisor no puede ser cero.")
