@@ -1,0 +1,33 @@
+name: Testing
+
+on:
+  push:
+    paths:
+      - 'testing/**'  # Solo ejecuta el workflow si hay cambios en la carpeta testing
+  pull_request:
+    paths:
+      - 'testing/**'  # También aplica para pull requests en esa carpeta
+
+jobs:
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Descargar el código
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Paso 2: Configurar Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  # Cambia según tu versión de Python
+
+      # Paso 3: Instalar dependencias (en este caso no se necesitan paquetes externos)
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip
+
+      # Paso 4: Ejecutar las pruebas
+      - name: Run tests
+        run: python -m unittest discover -s testing -p "test*.py"
