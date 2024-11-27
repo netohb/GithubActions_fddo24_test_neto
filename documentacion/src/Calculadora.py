@@ -56,25 +56,6 @@ class Calculadora:
         return a - b
 
     @staticmethod
-    def multiplicar(a, b):
-        """
-        Multiplica dos números .
-
-        Parameters
-        ----------
-        a : float
-            El primer número.
-        b : float
-            El segundo número.
-
-        Returns
-        -------
-        float
-            El producto de a y b.
-        """
-        return a * b
-
-    @staticmethod
     def dividir(a, b):
         """
         Divide dos números.
